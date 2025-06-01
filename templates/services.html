@@ -2,139 +2,126 @@
 {% load static %}
 {% block content %}
 
-        <!-- Header Start -->
-        <div class="container-fluid bg-breadcrumb">
-            <div class="container text-center py-5" style="max-width: 900px;">
-                <h3 class="text-white display-3 mb-4">Our Services</h1>
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item active text-white">Services</li>
-                </ol>    
-            </div>
-        </div>
-        <!-- Header End -->
+<!-- Sarlavha Boshlanishi -->
+<div class="container-fluid bg-breadcrumb">
+    <div class="container text-center py-5" style="max-width: 900px;">
+        <h3 class="text-white display-3 mb-4">Xizmatlarimiz</h3>
+        <ol class="breadcrumb justify-content-center mb-0">
+            <li class="breadcrumb-item"><a href="{% url 'home' %}">Bosh sahifa</a></li>
+            <li class="breadcrumb-item active text-white">Xizmatlar</li>
+        </ol>
+    </div>
+</div>
+<!-- Sarlavha Tugashi -->
 
-        <!-- Services Start -->
-        <div class="container-fluid bg-light service py-5">
-            <div class="container py-5">
-                <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h5 class="section-title px-3">Searvices</h5>
-                    <h1 class="mb-0">Our Services</h1>
-                </div>
+<!-- Xizmatlar Boshlanishi -->
+<div class="container-fluid bg-light service py-5">
+    <div class="container py-5">
+        <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+            <h5 class="section-title px-3">Xizmatlar</h5>
+            <h1 class="mb-0">Sayyohlar uchun taklif etiladigan xizmatlar</h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-6">
                 <div class="row g-4">
-                    <div class="col-lg-6">
-                        <div class="row g-4">
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
-                                    <div class="service-content text-end">
-                                        <h5 class="mb-4">WorldWide Tours</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
-                                    </div>
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-globe fa-4x text-primary"></i>
-                                    </div>
-                                </div>
+                    <div class="col-12">
+                        <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
+                            <div class="service-content text-end">
+                                <h5 class="mb-4">Tarixiy joylarga ekskursiyalar</h5>
+                                <p class="mb-0">Samarqand, Buxoro va Xivaga ekskursiyalar orqali O‘zbekistonning boy tarixi bilan yaqindan tanishing. Malakali gidlar sizga har bir obidaning hikoyasini aytib beradi.</p>
                             </div>
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center  bg-white border border-primary rounded p-4 pe-0">
-                                    <div class="service-content text-end">
-                                        <h5 class="mb-4">Hotel Reservation</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
-                                    </div>
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-hotel fa-4x text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
-                                    <div class="service-content text-end">
-                                        <h5 class="mb-4">Travel Guides</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
-                                    </div>
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-user fa-4x text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
-                                    <div class="service-content text-end">
-                                        <h5 class="mb-4">Event Management</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
-                                    </div>
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-cog fa-4x text-primary"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="row g-4">
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-globe fa-4x text-primary"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h5 class="mb-4">WorldWide Tours</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-hotel fa-4x text-primary"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h5 class="mb-4">Hotel Reservation</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-user fa-4x text-primary"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h5 class="mb-4">Travel Guides</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
-                                    <div class="service-icon p-4">
-                                        <i class="fa fa-cog fa-4x text-primary"></i>
-                                    </div>
-                                    <div class="service-content">
-                                        <h5 class="mb-4">Event Management</h5>
-                                        <p class="mb-0">Dolor sit amet consectetur adipisicing elit. Non alias eum, suscipit expedita corrupti officiis debitis possimus nam laudantium beatae quidem dolore consequuntur voluptate rem reiciendis, omnis sequi harum earum.
-                                        </p>
-                                    </div>
-                                </div>
+                            <div class="service-icon p-4">
+                                <i class="fa fa-landmark fa-4x text-primary"></i>
                             </div>
                         </div>
                     </div>
                     <div class="col-12">
-                        <div class="text-center">
-                            <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="">Service More</a>
+                        <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
+                            <div class="service-content text-end">
+                                <h5 class="mb-4">Milliy taomlar master-klasslari</h5>
+                                <p class="mb-0">O‘zbek palovi, somsa va boshqa milliy taomlarni qanday tayyorlashni o‘rganing. Oshpazlarimiz sizga har bir taom sir-asrorini o‘rgatadi.</p>
+                            </div>
+                            <div class="service-icon p-4">
+                                <i class="fa fa-utensils fa-4x text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
+                            <div class="service-content text-end">
+                                <h5 class="mb-4">Transport va haydovchi xizmati</h5>
+                                <p class="mb-0">Shaxsiy avtomobil va haydovchi bilan O‘zbekiston bo‘ylab qulay sayohat qiling. Sizning xavfsizligingiz va qulayligingiz doimo ustuvor.</p>
+                            </div>
+                            <div class="service-icon p-4">
+                                <i class="fa fa-car fa-4x text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
+                            <div class="service-content text-end">
+                                <h5 class="mb-4">Sog‘lomlashtirish va spa markazlari</h5>
+                                <p class="mb-0">Sayohatdan so‘ng dam olish va tiklanish uchun eng yaxshi sanatoriylar va spa xizmatlarini taqdim etamiz.</p>
+                            </div>
+                            <div class="service-icon p-4">
+                                <i class="fa fa-spa fa-4x text-primary"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
+                            <div class="service-icon p-4">
+                                <i class="fa fa-hiking fa-4x text-primary"></i>
+                            </div>
+                            <div class="service-content">
+                                <h5 class="mb-4">Ekoturizm va tog‘ yurishlari</h5>
+                                <p class="mb-0">Chiroyli tog‘ manzaralari, toza havo va sayr qilishni yoqtiruvchilar uchun maxsus marshrutlar va yo‘lboshchilar bilan ekoturizm xizmatlari.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
+                            <div class="service-icon p-4">
+                                <i class="fa fa-camera fa-4x text-primary"></i>
+                            </div>
+                            <div class="service-content">
+                                <h5 class="mb-4">Professional fotosessiyalar</h5>
+                                <p class="mb-0">Sayohatingizni unutilmas lahzalar bilan yodda saqlang — tarixiy joylarda professional suratkashlar bilan fotosessiyalar.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
+                            <div class="service-icon p-4">
+                                <i class="fa fa-language fa-4x text-primary"></i>
+                            </div>
+                            <div class="service-content">
+                                <h5 class="mb-4">Tarjimon va til bo‘yicha yordam</h5>
+                                <p class="mb-0">Til to‘siqlarisiz sayohat qiling — sizga ingliz, rus, frantsuz yoki boshqa tillarda tarjima qiluvchi yordamchilar ajratamiz.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
+                            <div class="service-icon p-4">
+                                <i class="fa fa-briefcase fa-4x text-primary"></i>
+                            </div>
+                            <div class="service-content">
+                                <h5 class="mb-4">Biznes sayohatlar uchun xizmatlar</h5>
+                                <p class="mb-0">Agar siz xizmat safari bilan kelsangiz, uchrashuvlarni tashkil qilish, tarjima, va ishbilarmonlar uchun qulay joylarni taqdim etamiz.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Services End -->
+    </div>
+</div>
+<!-- Xizmatlar Tugashi -->
 
 {% endblock content %}

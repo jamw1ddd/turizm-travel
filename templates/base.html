@@ -60,7 +60,7 @@
         <div class="container-fluid position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                    <h1 class="m-0"><i class="fa fa-map-marker-alt me-3"></i>Travela</h1>
+                    <h1 class="m-0"><i class="fa fa-map-marker-alt me-3"></i>Sayohatlar</h1>
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -68,14 +68,14 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
-                        <a href="{% url 'home' %}" class="nav-item nav-link active">Home</a>
-                        <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
-                        <a href="{% url 'services' %}" class="nav-item nav-link">Services</a>
-                        <a href="{% url 'packages' %}" class="nav-item nav-link">Packages</a>
-                        <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
-                        <a href="{% url 'gallery' %}" class="nav-item nav-link">Our gallery</a>
+                        <a href="{% url 'home' %}" class="nav-item nav-link active">Bosh sahifa</a>
+                        <a href="{% url 'about' %}" class="nav-item nav-link">Biz haqimizda</a>
+                        <a href="{% url 'services' %}" class="nav-item nav-link">Xizmatlar</a>
+                        <a href="{% url 'packages' %}" class="nav-item nav-link">Paketlar</a>
+                        <a href="{% url 'contact' %}" class="nav-item nav-link">Aloqa</a>
+                        <a href="{% url 'gallery' %}" class="nav-item nav-link">Galereya</a>
                     </div>
-                    <a href="{% url 'booking' %}" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Book Now</a>
+                    <a href="{% url 'booking' %}" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Band qilish</a>
                 </div>
             </nav>
 
@@ -87,14 +87,19 @@
         <div class="container-fluid subscribe py-5">
             <div class="container text-center py-5">
                 <div class="mx-auto text-center" style="max-width: 900px;">
-                    <h5 class="subscribe-title px-3">Subscribe</h5>
-                    <h1 class="text-white mb-4">Our Newsletter</h1>
-                    <p class="text-white mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore nam, architecto doloremque velit explicabo? Voluptate sunt eveniet fuga eligendi! Expedita laudantium fugiat corrupti eum cum repellat a laborum quasi.
+                    <h5 class="subscribe-title px-3">Obuna bo‘ling</h5>
+                    <h1 class="text-white mb-4">Yangiliklarimizdan xabardor bo‘ling</h1>
+                    <p class="text-white mb-5">
+                        So‘nggi sayohat turlari, maxsus chegirmalar va yangiliklardan birinchi bo‘lib xabardor bo‘lishni xohlaysizmi? 
+                        Email manzilingizni kiriting va bizning yangiliklar byulletenimizga obuna bo‘ling!
                     </p>
-                    <div class="position-relative mx-auto">
-                        <input class="form-control border-primary rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Subscribe</button>
-                    </div>
+                    <form method="POST" action="{% url 'subscribe' %}">
+                        {% csrf_token %}
+                        <div class="position-relative mx-auto">
+                            <input name="email" class="form-control border-primary rounded-pill w-100 py-3 ps-4 pe-5" type="email" placeholder="Email manzilingiz" required>
+                            <button type="submit" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Obuna bo‘lish</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -106,40 +111,40 @@
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Get In Touch</h4>
-                            <a href=""><i class="fas fa-home me-2"></i> 123 Street, New York, USA</a>
-                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
-                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
-                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
+                            <h4 class="mb-4 text-white">Bog‘lanish</h4>
+                            <a href=""><i class="fas fa-home me-2"></i> Toshkent sh., Amir Temur ko'chasi, 123-uy</a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> info@sayohat.uz</a>
+                            <a href=""><i class="fas fa-phone me-2"></i> +998 90 123 45 67</a>
+                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +998 71 234 56 78</a>
                             <div class="d-flex align-items-center">
                                 <i class="fas fa-share fa-2x text-white me-2"></i>
-                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href="#"><i class="fab fa-instagram"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Company</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> About</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Careers</a>
+                            <h4 class="mb-4 text-white">Kompaniya</h4>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Biz haqimizda</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Ish imkoniyatlari</a>
                             <a href=""><i class="fas fa-angle-right me-2"></i> Blog</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Press</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Gift Cards</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Magazine</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Matbuot</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Sovg‘a kartalari</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Jurnallar</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Support</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Contact</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Legal Notice</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Terms and Conditions</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Sitemap</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Cookie policy</a>
+                            <h4 class="mb-4 text-white">Yordam</h4>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Aloqa</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Huquqiy ma’lumotlar</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Maxfiylik siyosati</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Foydalanish shartlari</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Sayt xaritasi</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Cookie siyosati</a>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
@@ -149,30 +154,30 @@
                                     <form>
                                         <div class="form-floating">
                                             <select class="form-select bg-dark border" id="select1">
-                                                <option value="1">Arabic</option>
-                                                <option value="2">German</option>
-                                                <option value="3">Greek</option>
-                                                <option value="3">New York</option>
+                                                <option value="1">O‘zbekcha</option>
+                                                <option value="2">Ruscha</option>
+                                                <option value="3">Inglizcha</option>
+                                                <option value="4">Qoraqalpoqcha</option>
                                             </select>
-                                            <label for="select1">English</label>
+                                            <label for="select1">Tilni tanlang</label>
                                         </div>
                                     </form>
                                 </div>
                                 <div class="col-xl-6">
                                     <form>
                                         <div class="form-floating">
-                                            <select class="form-select bg-dark border" id="select1">
-                                                <option value="1">USD</option>
-                                                <option value="2">EUR</option>
-                                                <option value="3">INR</option>
-                                                <option value="3">GBP</option>
+                                            <select class="form-select bg-dark border" id="select2">
+                                                <option value="1">UZS</option>
+                                                <option value="2">USD</option>
+                                                <option value="3">EUR</option>
+                                                <option value="4">RUB</option>
                                             </select>
-                                            <label for="select1">$</label>
+                                            <label for="select2">Valyuta</label>
                                         </div>
                                     </form>
                                 </div>
                             </div>
-                            <h4 class="text-white mb-3">Payments</h4>
+                            <h4 class="text-white mb-3">To‘lov usullari</h4>
                             <div class="footer-bank-card">
                                 <a href="#" class="text-white me-2"><i class="fab fa-cc-amex fa-2x"></i></a>
                                 <a href="#" class="text-white me-2"><i class="fab fa-cc-visa fa-2x"></i></a>
@@ -187,20 +192,16 @@
             </div>
         </div>
         <!-- Footer End -->
-        
+
         <!-- Copyright Start -->
         <div class="container-fluid copyright text-body py-4">
             <div class="container">
                 <div class="row g-4 align-items-center">
                     <div class="col-md-6 text-center text-md-end mb-md-0">
-                        <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">Your Site Name</a>, All right reserved.
+                        <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">Sizning Saytingiz Nomi</a>, Barcha huquqlar himoyalangan.
                     </div>
                     <div class="col-md-6 text-center text-md-start">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="text-white" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
-                    </div>
+                        Dizayn: <a class="text-white" href="https://htmlcodex.com">HTML Codex</a> | Tarqatilgan: <a href="https://themewagon.com">ThemeWagon</a>
                     </div>
                 </div>
             </div>
